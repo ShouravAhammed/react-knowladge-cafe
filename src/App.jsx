@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <main className='grid grid-cols-3 gap-6 container px-10 py-4 mx-auto'>
+      <main className='grid md:grid-cols-3 grid-cols-1 gap-6 container md:px-10 px-4 py-4 mx-auto'>
       <Blogs handleBookmarks={handleBookmarks}
       handleMarkAsRead={handleMarkAsRead}>
       </Blogs>

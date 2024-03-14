@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Blog = ({blog, handleBookmarks, handleMarkAsRead}) => {
 
-    const {cover, title, author, author_img, posted_date, reading_time, hashtags} = blog
+    const {id, cover, title, author, author_img, posted_date, reading_time, hashtags} = blog
 
     return (
         <div className="space-y-3 border-b-2 border-[#1111111A] pb-10">
@@ -34,7 +34,7 @@ const Blog = ({blog, handleBookmarks, handleMarkAsRead}) => {
                     hashtags.map((hash, idx) => <span key={idx}><a href="">#{hash}</a></span>)
                 }
             </p>
-            <button className="text-[#6047EC] font-semibold text-xl underline" onClick={() => handleMarkAsRead(reading_time)}>Mark as read</button>
+            <button className="text-[#6047EC] font-semibold text-xl underline" onClick={() => handleMarkAsRead(id, reading_time)}>Mark as read</button>
         </div>
     );
 };
